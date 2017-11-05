@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		
+		<title>Deus Vult! – Crusader Soundboard</title>
+		<style  type="text/css">
+			html {
+			background: url(img/background.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			}
+		</style>
+		
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+		<link href="fonts/materialize_icons.css" rel="stylesheet"/>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	</head>
+	<body class="loaded">
+		<script type="text/javascript">
+			var count_click = 0;
+			
+			var sound1 = new Audio('sounds/1.mp3');
+			var sound2 = new Audio('sounds/2.mp3');
+			var sound3 = new Audio('sounds/3.mp3');
+			var sound4 = new Audio('sounds/4.mp3');
+			
+			
+			function play_sound(number){
+				switch (number){
+					case 1:
+					sound1.play();
+					break;
+					case 2:
+					sound2.play();
+					break;
+					case 3:
+					sound3.play();
+					break;
+					case 4:
+					sound4.play();
+					break;
+					default:
+					break;
+				}
+				
+				count_click = count_click + 1;
+				if (count_click >= 14){
+					count_click = 0;
+					Android.ShowInterstitialAd_app();
+				}
+			}
+			
+			
+		</script>
+		
+		<div class="container white">
+			<div class="row center">
+				<div class="col s12">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/crusader.jpg">
+							<span class="card-title"></span>
+						</div>
+						<div class="card-action">
+							<p>
+								<a class="waves-effect waves-light red btn" onclick="play_sound(1)">We will take Jerusalem!</a>
+							</p>
+							<p>
+								<a class="waves-effect waves-light red btn" onclick="play_sound(2)">Ave Maria!</a>
+							</p>
+							<p>
+								<a class="waves-effect waves-light red btn" onclick="play_sound(3)">Deus Vult!</a>
+							</p>
+							<p>
+								<a class="waves-effect waves-light red btn" onclick="play_sound(4)">It says you're a heretic!</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>
+
+
+
